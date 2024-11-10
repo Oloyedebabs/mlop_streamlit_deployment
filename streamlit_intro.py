@@ -31,7 +31,7 @@ st.set_page_config(page_title="Sentiment Analysis Demo", page_icon="🧠", layou
 
 # Header section
 st.title("🧠 Sentiment Analysis with TinyBERT")
-st.markdown("Welcome to the Sentiment Analysis Model Demo! This tool helps analyze tweet sentiment and understand the emotions behind it.")
+st.markdown("Welcome to the Sentiment Analysis Model Demo! This tool helps analyze tweet sentiment and determine potential natural disaster indications in specific areas.")
 
 # Sidebar for model options
 st.sidebar.header("Model Options")
@@ -75,9 +75,9 @@ if st.button("Analyze Sentiment"):
 
             # Add icons based on sentiment
             if result["label"] == "general":
-                col2.write("😊 Positive Vibes!")
+                col2.write("✅ No Disaster!")
             elif result["label"] == "disaster":
-                col2.write("😞 Negative Tone")
+                col2.write("🚨 Disaster Alert!")
             else:
                 col2.write("😐 Neutral")
     else:
